@@ -1,0 +1,464 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <!-- Meta -->
+  <title>OCP Presale</title>
+  <meta name="description" content="OCP Finance" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1" />
+  <meta name="theme-color" content="#1FC7D4" />
+  <meta name="twitter:image" content="https://swap.SATIN.io/" />
+  <meta name="twitter:description" content="This is OCP Presale Website. Let's buy OCP token!" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OCP Finance run on Binance Smart Chain (BSC)" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- sweet alert -->
+  <script src="sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="sweetalert.min.css">
+
+  <!-- abi -->
+  <script src="abi/OCP.js"></script>
+</head>
+
+<body class="darkmode">
+  <section>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark  container">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav">
+              <li class="nav-item"> <a class="nav-link " href="https://ordinarycitizenproject.com/"
+                  target="_blank"><span class="nav-separete">Home</span> </a> </li>
+              <!-- <li class="nav-item "> <a class="nav-link "
+                  href="https://pancakeswap.finance/swap?outputCurrency=0xEB76fA2975deec9750BfCEb84246315945719357"
+                  target="_blank"><i class="fas fa-coins"></i> <span class="nav-separete">Buy Satin</a> </li> -->
+              <li class="nav-item active">
+                <a class="nav-link " href="#">
+                  <!-- <i class="fas fa-hand-holding-usd"></i> -->
+                  <span class="nav-separete">Presale</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/How.pdf">
+                  <!-- <i class="fas fa-question-circle"></i> -->
+                  <span class="nav-separete">How it works</span>
+                </a>
+              </li>
+            </ul>
+            <a class="logo-image"></a>
+          </div>
+
+          <div class="div-connect">
+            <button class="button connect-wallet description" onclick="connectWallet()"><i
+                class="fas fa-wallet pr-1"></i>Connect Wallet</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="page-container">
+      <div class="div-claim">
+        <div class="container">
+          <div class="flex justify-content-center flex-wrap">
+            <p class="claim-title col-sm-6 col-md-12 col-lg-7 text-left bold">
+              The World's Most Ordinary Community Digital Currency
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="subMenu">
+        <p class="white text-center stake-caption">Presale Countdown</p>
+        <p class="white text-center stake-caption1">
+          <span id="presaledeadline">-- Days : -- : -- : --</span>
+        </p>
+        <div class="container flex MainSub">
+          <p class="white text-center stake-caption">
+            <a href="https://testnet.bscscan.com/address/0xe5b30956379c21522efa255697c2833bd0a57834#readContract"
+              target="_blank" class="white">
+              OCP
+            </a>
+            Presale Tokens still available:&nbsp;&nbsp;
+            <span id="totalLockedBalance">1125000000</span>
+            <span class="white">OCP</span>
+          </p>
+        </div>
+      </div>
+      <div id="content" class="container stakingmainsection">
+
+        <div class="row justify-content-center mt-1 white">
+          <div class="col-custom col-lg-9 col-md-10 px-lg-0 px-0">
+            <div class="staking-card card-main">
+              <div class="staking-header flex">
+                <div class="left-content col-lg-6 col-md-6 col-sm-6 p-0">
+                  <div class="staking-header-title">
+                    <h2 color="text" class="font-staking-title pl-3">
+                      <img class="img-coins" src="logo1.png" alt="usth" />
+                      <span style="font-size:xx-large;">Presale</span>
+                      <img class="img-coins" src="logo.png" alt="usth" />
+                    </h2>
+                  </div>
+
+                  <div class="staking-content">
+                    <table class="profit table table-bordered profit-border" style="text-align: center;">
+                      <thead>
+                        <tr>
+                          <th colspan="3" style="font-size: 19px; font-weight: 400;">OCP Token Distribution and Lock-up
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th colspan="3" style="font-weight: 400;">Total Supply 7,500,000,000 (7.5 B)</th>
+                        </tr>
+                        <tr>
+                          <th style="font-weight: 400; padding: 1.5rem 0rem;">Distribution</th>
+                          <th style="font-weight: 400; padding: 1.5rem 0.7rem;">Percent</th>
+                          <th style="font-weight: 400;">Lock Period (from launch)</th>
+                        </tr>
+                        <tr class="profit1">
+                          <td>PRESALE</td>
+                          <td>15%</td>
+                          <td>30 Days</td>
+                        </tr>
+                        <tr class="profit2">
+                          <td>MARKETING</td>
+                          <td>2.5%</td>
+                          <td>60 Days</td>
+                        </tr>
+                        <tr class="profit3">
+                          <td>FOUNDATION</td>
+                          <td>5%</td>
+                          <td>60 Days</td>
+                        </tr>
+                        <tr class="profit4">
+                          <td>REMAINING AVAILABLE SUPPLY</td>
+                          <td>75%</td>
+                          <td>0 Days</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="staking-label white" style="font-size: 20px; text-align:center;">
+                      OCP Presale Live Numbers
+                    </div>
+                    <table class="profit table table-bordered profit-border" style="text-align: center;">
+                      <thead>
+                        <tr>
+                          <th style="font-weight: 400; width: 35%;">Sold</th>
+                          <th style="font-weight: 400; width: 35%;">Remaining</th>
+                          <th style="font-weight: 400; width: 30%;">Target %</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th style="font-weight: 400;" id="input_presale_sold">0</th>
+                          <th style="font-weight: 400;" id="input_presale_remaining">1,125,000,000</th>
+                          <th style="font-weight: 400;" id="est_apr1">0 %</th>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div style="margin: 1.5rem 0rem 1rem; text-align:center;">
+                      <p style="margin-bottom: 0rem">OCP Presale Token Purchase Limit</p>
+                      <p style="margin-bottom: 0rem">Minimum 250000 OCP &nbsp;&nbsp;&nbsp;($25 USD)</p>
+                      <p style="margin-bottom: 0rem">Maximum 2500000 OCP ($250 USD)</p>
+                    </div>
+
+                    <div class="flex duration-group">
+                      <div class="btn-staking btn-active duration0" onclick="setAmount(0)">
+                        <span class="check-active"><i class="fas fa-check"></i></span> $ 25
+                      </div>
+                      <div class="btn-staking duration1" onclick="setAmount(1)">
+                        <span class="check-active hide"><i class="fas fa-check"></i></span> $ 50
+                      </div>
+                      <div class="btn-staking duration2" onclick="setAmount(2)">
+                        <span class="check-active hide"><i class="fas fa-check"></i></span> $ 75
+                      </div>
+                      <div class="btn-staking duration3" onclick="setAmount(3)">
+                        <span class="check-active hide"><i class="fas fa-check"></i></span> $ 100
+                      </div>
+                      <div class="btn-staking duration4" onclick="setAmount(4)">
+                        <span class="check-active hide"><i class="fas fa-check"></i></span> $ 150
+                      </div>
+                      <div class="btn-staking duration5" onclick="setAmount(5)">
+                        <span class="check-active hide"><i class="fas fa-check"></i></span> $ 200
+                      </div>
+                      <div class="btn-staking duration6" onclick="setAmount(6)">
+                        <span class="check-active hide"><i class="fas fa-check"></i></span> $ 250
+                      </div>
+                    </div>
+
+                    <div class="staking-label mt-4 mb-1" style="font-size: 15px;">
+                      Presale Amount
+                    </div>
+                    <div class="input-lock-amount">
+                      <div class="input-group mb-3">
+                        <input type="number" class="form-control input-amount" placeholder="Please enter the amount"
+                          min="250000" max="2500000" aria-label="Please enter the amount" value="250000"
+                          aria-describedby="basic-addon2" onkeyup="validInput()">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2" onclick="selectMax()">OCP</span>
+                        </div>
+                      </div>
+                      <div class="error-msg hide">Insufficient balance</div>
+                    </div>
+
+                    <div class="input-lock-amount">
+                      <div class="input-group mb-3">
+                        <input type="number" class="form-control input-amount1" placeholder="amount"
+                          aria-label="Please enter the amount" value="0.09234" disabled>
+                        <div class="input-group-append">
+                          <span class="input-group-text" style="background: white; font-weight: 700;">BNB</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button id="btn-approve" type="button" class="btn mainbtn btn-lg w-100 bold" onclick="buyPresale()">
+                      Buy OCP
+                    </button>
+
+                  </div>
+                </div>
+
+                <div class="right-content col-lg-6 col-md-6 col-sm-6 ">
+                  <h2 color="text" class="font-staking-title summary">Summary</h2>
+                  <div class="flex">
+                    <div>
+                      <div class="dot-yellow"></div>
+                      <div class="split1"></div>
+                    </div>
+                    <div class="flex-right">
+                      <div class="summary-label">Presale Start</div>
+                      <div class="summary-date">2 March 23 00:00</div>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <div>
+                      <div class="dot-yellow"></div>
+                      <div class="split1"></div>
+                    </div>
+                    <div class="flex-right">
+                      <div class="summary-label">Presale End</div>
+                      <div class="summary-date">31 March 23 59:99</div>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <div>
+                      <div class="dot-yellow"></div>
+                      <div class="split1"></div>
+                    </div>
+                    <div class="flex-right">
+                      <div class="summary-label">Token Launch</div>
+                      <div class="summary-date">1 April 23 00:00</div>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <div>
+                      <div class="dot-yellow"></div>
+                      <div class="split1"></div>
+                    </div>
+                    <div class="flex-right">
+                      <div class="summary-label">Presale Tokens Release</div>
+                      <div class="summary-date">1 May 23 00:00</div>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <div>
+                      <div class="dot-yellow"></div>
+                      <div class="split1"></div>
+                    </div>
+                    <div class="flex-right">
+                      <div class="summary-label">Marketing Tokens Release</div>
+                      <div class="summary-date">31 May 23 00:00</div>
+                    </div>
+                  </div>
+                  <!-- <div class="flex">
+                    <div>
+                      <div class="dot-yellow"></div>
+                    </div>
+                    <div class="flex-right">
+                      <div class="summary-label">Presale Final Date</div>
+                      <div class="summary-date" id="value-date">2021-11-05 04:04</div>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <div class="relative">
+                      <div class="split2"></div>
+                      <div class="dot-yellow"></div>
+                    </div>
+                    <div class="maxWidth">
+                      <div class="flex-right summary-interest">
+                      </div>
+                      <div class="flex-right summary-interest" style="margin: -5px 0;">
+                        <div class="summary-label">Presale and Marketing Coin Lock Release Date </div>
+                        <div class="summary-date" id="interest-end-date">2021-12-05 19:00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <div class="relative">
+                      <div class="split4"></div>
+                    </div>
+                    <div class="maxWidth">
+                      <div class="flex-right summary-period">
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="flex">
+                    <div>
+                      <div class="dot-yellow"></div>
+                    </div>
+                    <div class="flex-right">
+                      <div class="summary-label">Foundation Tokens Release</div>
+                      <div class="summary-date">31 May 23 00:00</div>
+                    </div>
+                  </div>
+                  <div class="h-split"></div>
+                  <div class="flex-right pb-2">
+                    <div class="summary-label">Total OCP Presale tokens sold: </div>
+                    <div class="summary-date green bold">
+                      <span id="est_apr">0</span>%
+                    </div>
+                  </div>
+                  <div class="flex-right mt-1 apy-description">
+                    <i class="fas fa-exclamation-circle"></i>OCP Presale Event runs 30 days to OCP Token Launch.
+                    Presale tokens are locked for 30 days from OCP Token Launch date.
+                    No fee or transaction tax apply to OCP Presale tokens.
+                  </div>
+                  <div class="h-split"></div>
+
+                  <div>
+                    <p>1 OCP Token = $0.0001</p>
+                    <p>Can only purchase OCP Presale Token with:</p>
+                    <p>BNB
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <img src="bnb.png" width="50px" height="50px" />
+                    </p>
+                    <p>MetaMask Wallet&nbsp;&nbsp;&nbsp;
+                      <img src="metamask.png" width="55px" height="55px" />
+                    </p>
+                  </div>
+
+                  <div style="padding-top: 65px;">
+                    <p>&#9679; Estimated BNB required to purchase your chosen number of OCP Presale Tokens.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pp-footer mt-4">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-12 text-muted mt-md-0 mt-3 text-md-start text-center">Copyright © 2022 |
+                Ordinary Citizen Project</div>
+              <div class="col-md-6">
+
+              </div>
+              <!-- div class="col-md-4 text-center text-muted">Version 1.0.0
+            </div>
+            <div class="col-md-4">
+              <a class="white text-decoration-none d-flex align-items-center justify-content-md-end justify-content-center"
+                onclick="window.open('https://t.me/SATINofficial', '_newtab')">
+                <i class="fab fa-telegram-plane mr-1"></i><span>Community</span>
+              </a>
+            </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</body>
+
+<div class="modal fade" id="disconnectModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title nTrans">Your wallet</h4>
+        <button type="button" class="close com-color" data-dismiss="modal" style="outline: none;">×</button>
+      </div>
+      <div class="modal-body">
+        <div id="pubAccountAddress"></div>
+        <div class="flex" id="modalDetail">
+          <a class="underline" onclick="searchAccount()">View on BSC explorer <svg viewBox="0 0 24 24" color="primary"
+              width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM iXahuZ">
+              <path
+                d="M18 19H6C5.45 19 5 18.55 5 18V6C5 5.45 5.45 5 6 5H11C11.55 5 12 4.55 12 4C12 3.45 11.55 3 11 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V13C21 12.45 20.55 12 20 12C19.45 12 19 12.45 19 13V18C19 18.55 18.55 19 18 19ZM14 4C14 4.55 14.45 5 15 5H17.59L8.46 14.13C8.07 14.52 8.07 15.15 8.46 15.54C8.85 15.93 9.48 15.93 9.87 15.54L19 6.41V9C19 9.55 19.45 10 20 10C20.55 10 21 9.55 21 9V4C21 3.45 20.55 3 20 3H15C14.45 3 14 3.45 14 4Z">
+              </path>
+            </svg></a> &nbsp;&nbsp;&nbsp;
+          <a class="underline" onclick="copyToClipboard(selectedAccount)">Copy Address <svg viewBox="0 0 24 24"
+              width="20px" color="primary" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM iXahuZ">
+              <path
+                d="M15 1H4C2.9 1 2 1.9 2 3V16C2 16.55 2.45 17 3 17C3.55 17 4 16.55 4 16V4C4 3.45 4.45 3 5 3H15C15.55 3 16 2.55 16 2C16 1.45 15.55 1 15 1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM18 21H9C8.45 21 8 20.55 8 20V8C8 7.45 8.45 7 9 7H18C18.55 7 19 7.45 19 8V20C19 20.55 18.55 21 18 21Z">
+              </path>
+            </svg>
+            <div class="copyAddressTip">Copied</div>
+          </a>
+        </div>
+        <div class="btn-logout">
+          <a data-dismiss="modal" onclick="onDisconnect()"><span id="label-btn-logout">Logout</span></a>
+        </div>
+      </div>
+      <!-- Modal footer -->
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="claimandwithdraw">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title nTrans">Your Staked Info</h4>
+        <button type="button" class="close com-color" data-dismiss="modal" style="outline: none;">×</button>
+      </div>
+      <div class="modal-body claimandwithdraw">
+        <div class="modalDetail" id="modalDetail">
+
+        </div>
+        <div class="btn-claimall flex">
+          <span>Your Total Staked <span class="usertotalstakedsatin">---</span> <span
+              class="success-color">OCP</span></span>
+          <button class="mainbtn claimallbtn" onclick="claimall()">CLAIM ALL</button>
+        </div>
+      </div>
+      <!-- Modal footer -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="js/web3/dist/web3.min.js"></script>
+<script type="text/javascript" src="js/web3/web3modal.js"></script>
+<script type="text/javascript" src="js/web3/evm-chains/index.min.js"></script>
+<script type="text/javascript" src="js/web3/walletconnect/index.min.js"></script>
+<script type="text/javascript" src="js/web3/fortmatic/index.min.js"></script> -->
+  <script type="text/javascript" src="js/web3/evm-chains/index.min.js"></script>
+  <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/web3modal"></script>
+  <!-- <script type="text/javascript" src="https://unpkg.com/evm-chains/lib/index.js"></script> -->
+  <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider"></script>
+  <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+  <script type="text/javascript" src="https://cdn.ethers.io/scripts/ethers-v4.min.js"></script>
+  <script src="main.js"></script>
+  <script src="common.js"></script>
+  <script type="text/javascript" src="bignumber.js"></script>
+
+</html>
